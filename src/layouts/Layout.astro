@@ -39,6 +39,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     <!-- Plausible Analytics -->
     <script defer data-domain="bart.wildash.com" src="https://plausible.io/js/script.js"></script>
+
+    <!-- Dark mode initialization (prevent FOUC) -->
+    <script is:inline>
+      // Check localStorage and apply dark mode before render
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
   </head>
   <body>
     <slot />

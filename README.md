@@ -31,8 +31,8 @@ A fast, minimal personal website built with Astro, featuring a bento grid layout
 │   ├── components/
 │   │   ├── Header.astro
 │   │   ├── Footer.astro
-│   │   ├── BentoGrid.astro
-│   │   ├── ProjectCard.astro
+│   │   ├── ProjectList.astro
+│   │   ├── ProjectListItem.astro
 │   │   ├── WritingList.astro
 │   │   ├── CaseStudies.astro
 │   │   └── Contact.astro
@@ -84,21 +84,6 @@ npx wrangler pages deploy dist --project-name=bart-wildash-site
 ### Environment Variables
 
 - **PLAUSIBLE_DOMAIN**: `bart.wildash.com` (already configured in Layout.astro)
-
-## Project Sizing Logic
-
-Projects are automatically sized in the bento grid based on:
-- **Maturity** (1-5): How complete the project is
-- **Impact** (1-5): Expected reach and importance
-- **Effort** (1-5): Resources invested
-
-**Score calculation**: `0.5 × maturity + 0.3 × impact + 0.2 × effort`
-
-**Size mapping**:
-- **XL** (12 cols × 2 rows): score >= 4.2
-- **L** (6 cols × 2 rows): score 3.5-4.19
-- **M** (4 cols × 1 row): score 2.6-3.49
-- **S** (3 cols × 1 row): score <= 2.59
 
 ## RSS Feeds
 
