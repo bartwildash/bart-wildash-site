@@ -1,0 +1,73 @@
+---
+interface Props {
+  slug: string;
+  title: string;
+  status: string;
+  kind: string;
+  hardware: boolean;
+  oneLiner: string;
+}
+
+const { slug, title, status, kind, hardware, oneLiner } = Astro.props;
+---
+
+<article
+  class="project-list-item"
+  data-hardware={hardware}
+  data-kind={kind}
+>
+  <div class="flex flex-col md:flex-row md:items-center gap-3 md:gap-6">
+    <div class="flex-1">
+      <div class="flex items-center gap-2 mb-2 flex-wrap">
+        <h3 class="text-lg font-medium text-[var(--text-primary)] m-0">
+          {title}
+        </h3>
+        <div class="flex items-center gap-2">
+          {hardware && (
+            <span class="badge badge-hardware text-xs">
+              Hardware
+            </span>
+          )}
+          <span class={`badge badge-${status} text-xs`}>
+            {status.charAt(0).toUpperCase() + status.slice(1)}
+          </span>
+        </div>
+      </div>
+      <p class="text-[var(--text-secondary)] text-sm leading-relaxed m-0">
+        {oneLiner}
+      </p>
+    </div>
+
+    <a
+      href={`/projects/${slug}`}
+      class="text-sm font-medium text-[var(--flexoki-blue)] hover:underline inline-flex items-center gap-1 group whitespace-nowrap"
+      aria-label={`Learn more about ${title}`}
+    >
+      Learn more
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-transform group-hover:translate-x-1" aria-hidden="true">
+        <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </a>
+  </div>
+</article>
+
+<style>
+  .project-list-item {
+    padding: 16px 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--ink) 6%, transparent);
+    transition: background-color var(--transition-short);
+  }
+
+  .project-list-item:hover {
+    background-color: color-mix(in srgb, var(--ink) 2%, transparent);
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-left: -12px;
+    margin-right: -12px;
+    border-radius: 8px;
+  }
+
+  .project-list-item:last-child {
+    border-bottom: none;
+  }
+</style>

@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import BentoGrid from '../components/BentoGrid.astro';
+import ProjectList from '../components/ProjectList.astro';
 import WritingList from '../components/WritingList.astro';
 import CaseStudies from '../components/CaseStudies.astro';
 import Contact from '../components/Contact.astro';
@@ -12,30 +12,24 @@ import Footer from '../components/Footer.astro';
   <Header />
 
   <main>
-    <!-- Hero Section -->
-    <section class="max-w-7xl mx-auto px-6 py-16 md:py-24">
-      <h1 class="text-5xl md:text-7xl font-bold mb-8 text-[var(--text-primary)] leading-tight text-balance">
-        Bart Wildash
-      </h1>
+    <!-- Hero Section with Giant AFUGR Logo -->
+    <section class="hero-section flex flex-col items-center justify-center px-6" style="min-height: 50vh;">
+      <img
+        src="/logo.svg"
+        alt="AFUGR"
+        class="w-full max-w-5xl h-auto mb-12"
+        style="max-height: 40vh;"
+      />
 
-      <p class="text-xl md:text-2xl text-[var(--text-secondary)] max-w-4xl mb-10 leading-relaxed text-balance">
+      <p class="text-xl md:text-2xl text-[var(--text-secondary)] max-w-4xl leading-relaxed text-balance text-center">
         I build systems, gadgets, and experiments that do not always fit neatly into one box. Some are heavy infrastructure such as event wallets and pop-up networks. Some are reflective such as Orbit, a relationship manager that helps you care for people without feeds or extraction. Some are playful such as spatial cameras and small devices that laugh with you. This page is a Bento of work in progress and work that already ships.
       </p>
-
-      <div class="flex flex-wrap gap-4">
-        <a href="#projects" class="btn-primary">
-          See projects
-        </a>
-        <a href="#contact" class="btn-secondary">
-          Get in touch
-        </a>
-      </div>
     </section>
 
-    <!-- Projects Bento Grid -->
-    <section id="projects" class="max-w-7xl mx-auto px-6 py-12">
+    <!-- Projects List -->
+    <section id="projects" class="max-w-5xl mx-auto px-6 py-12 mt-12">
       <h2 class="text-3xl font-semibold mb-8 text-[var(--text-primary)]">Projects</h2>
-      <BentoGrid />
+      <ProjectList />
     </section>
 
     <!-- Writing Preview -->

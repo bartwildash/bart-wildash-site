@@ -199,11 +199,12 @@ a {
 .badge {
   display: inline-flex;
   align-items: center;
-  padding: 4px 12px;
-  border-radius: 12px;
-  font-size: 13px;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 12px;
   font-weight: 500;
   white-space: nowrap;
+  letter-spacing: 0.01em;
 }
 
 .badge-hardware {
