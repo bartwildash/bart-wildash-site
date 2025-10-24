@@ -1,16 +1,54 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import BentoGrid from '../components/BentoGrid.astro';
+import WritingList from '../components/WritingList.astro';
+import CaseStudies from '../components/CaseStudies.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Bart Wildash" description="I build systems, gadgets, and experiments that do not always fit neatly into one box.">
+  <Header />
+
+  <main>
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+      <h1 class="text-5xl md:text-7xl font-bold mb-8 text-[var(--text-primary)] leading-tight text-balance">
+        Bart Wildash
+      </h1>
+
+      <p class="text-xl md:text-2xl text-[var(--text-secondary)] max-w-4xl mb-10 leading-relaxed text-balance">
+        I build systems, gadgets, and experiments that do not always fit neatly into one box. Some are heavy infrastructure such as event wallets and pop-up networks. Some are reflective such as Orbit, a relationship manager that helps you care for people without feeds or extraction. Some are playful such as spatial cameras and small devices that laugh with you. This page is a Bento of work in progress and work that already ships.
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="#projects" class="btn-primary">
+          See projects
+        </a>
+        <a href="#contact" class="btn-secondary">
+          Get in touch
+        </a>
+      </div>
+    </section>
+
+    <!-- Projects Bento Grid -->
+    <section id="projects" class="max-w-7xl mx-auto px-6 py-12">
+      <h2 class="text-3xl font-semibold mb-8 text-[var(--text-primary)]">Projects</h2>
+      <BentoGrid />
+    </section>
+
+    <!-- Writing Preview -->
+    <WritingList />
+
+    <!-- Case Studies -->
+    <CaseStudies />
+
+    <!-- Contact -->
+    <section id="contact">
+      <Contact />
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

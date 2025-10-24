@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="1024" viewBox="0 0 2048 1024">
+  <rect width="100%" height="100%" fill="#FFFCF0"/>
+  <style>
+    .face { font-family: "Archivo Black", "Satoshi Black", "Avenir Next Heavy", Arial, sans-serif; font-weight: 900; }
+  </style>
+
+  <g transform="translate(100,780)">
+    <!-- A (bottom) -->
+    <text class="face" x="0"    y="0" font-size="760" fill="#4D7CFF" letter-spacing="-30">A</text>
+    <!-- F (in front of U, slightly right) -->
+    <text class="face" x="420"  y="0" font-size="760" fill="#E16EFF" letter-spacing="-30">F</text>
+    <!-- U (behind F, moved 15% closer) -->
+    <text class="face" x="646"  y="0" font-size="760" fill="#5CD4E5" letter-spacing="-30" opacity="0.97">U</text>
+    <!-- G (slightly right, topmost, shifted left) -->
+    <text class="face" x="1006" y="0" font-size="760" fill="#F7D75C" letter-spacing="-30">G</text>
+    <!-- R (moved right a bit, behind G, shifted left) -->
+    <text class="face" x="1366" y="0" font-size="760" fill="#5ED68A" letter-spacing="-30" opacity="0.98">R</text>
+  </g>
+</svg>

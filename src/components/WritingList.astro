@@ -1,0 +1,53 @@
+---
+// Sample writing posts - this would be replaced with real content later
+const posts = [
+  {
+    title: 'Building systems that care',
+    date: '2025-01-15',
+    slug: 'building-systems-that-care'
+  },
+  {
+    title: 'Why local-first matters',
+    date: '2025-01-08',
+    slug: 'why-local-first-matters'
+  },
+  {
+    title: 'Hardware is hard, but worth it',
+    date: '2024-12-20',
+    slug: 'hardware-is-hard'
+  }
+];
+---
+
+<section class="mt-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-semibold mb-8 text-[var(--text-primary)]">Writing</h2>
+
+    <div class="grid gap-6 md:grid-cols-3">
+      {posts.map((post) => (
+        <article class="card-shadow bg-[var(--bg-card)] rounded-[20px] p-6 hover:card-shadow-hover transition-all duration-[var(--transition-calm)] hover:translate-y-[-2px]">
+          <time class="text-sm text-[var(--text-tertiary)] mb-2 block" datetime={post.date}>
+            {new Date(post.date).toLocaleDateString('en-GB', {
+              day: 'numeric',
+              month: 'long',
+              year: 'numeric'
+            })}
+          </time>
+          <h3 class="text-lg font-semibold mb-3 text-[var(--text-primary)]">
+            {post.title}
+          </h3>
+          <a
+            href={`/writing/${post.slug}`}
+            class="text-sm font-medium text-[var(--flexoki-blue)] hover:underline inline-flex items-center gap-1 group"
+            aria-label={`Read ${post.title}`}
+          >
+            Read more
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-transform group-hover:translate-x-1" aria-hidden="true">
+              <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

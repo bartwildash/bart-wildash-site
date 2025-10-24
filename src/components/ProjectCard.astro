@@ -1,0 +1,63 @@
+---
+interface Props {
+  slug: string;
+  title: string;
+  status: string;
+  kind: string;
+  hardware: boolean;
+  oneLiner: string;
+  sizeClass: string;
+}
+
+const { slug, title, status, kind, hardware, oneLiner, sizeClass } = Astro.props;
+---
+
+<article
+  class={`project-card ${sizeClass} card-shadow bg-[var(--bg-card)] rounded-[20px] p-6 flex flex-col justify-between transition-all duration-[var(--transition-calm)] hover:card-shadow-hover hover:translate-y-[-2px]`}
+  data-hardware={hardware}
+  data-kind={kind}
+>
+  <div>
+    <div class="flex items-center gap-2 mb-3 flex-wrap">
+      {hardware && (
+        <span class="badge badge-hardware">
+          Hardware
+        </span>
+      )}
+      <span class={`badge badge-${status}`}>
+        {status.charAt(0).toUpperCase() + status.slice(1)}
+      </span>
+    </div>
+
+    <h3 class="text-xl font-semibold mb-2 text-[var(--text-primary)]">
+      {title}
+    </h3>
+
+    <p class="text-[var(--text-secondary)] text-base leading-relaxed mb-4">
+      {oneLiner}
+    </p>
+  </div>
+
+  {hardware && (
+    <div class="mb-4 opacity-20">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="12" y="16" width="24" height="16" stroke="currentColor" stroke-width="2" rx="2" />
+        <line x1="18" y1="16" x2="18" y2="12" stroke="currentColor" stroke-width="2" />
+        <line x1="30" y1="16" x2="30" y2="12" stroke="currentColor" stroke-width="2" />
+        <circle cx="18" cy="24" r="2" fill="currentColor" />
+        <circle cx="30" cy="24" r="2" fill="currentColor" />
+      </svg>
+    </div>
+  )}
+
+  <a
+    href={`/projects/${slug}`}
+    class="text-sm font-medium text-[var(--flexoki-blue)] hover:underline inline-flex items-center gap-1 group"
+    aria-label={`Learn more about ${title}`}
+  >
+    Learn more
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-transform group-hover:translate-x-1" aria-hidden="true">
+      <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </a>
+</article>

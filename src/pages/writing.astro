@@ -1,0 +1,61 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Writing - Bart Wildash" description="Thoughts on building systems, hardware, and experiments">
+  <Header />
+
+  <main>
+    <section class="max-w-4xl mx-auto px-6 py-16 md:py-24">
+      <h1 class="text-5xl md:text-6xl font-bold mb-8 text-[var(--text-primary)] leading-tight">
+        Writing
+      </h1>
+
+      <p class="text-xl text-[var(--text-secondary)] mb-12 leading-relaxed">
+        Thoughts on building systems, hardware, and experiments that matter.
+      </p>
+
+      <div class="space-y-8">
+        <article class="card-shadow bg-[var(--bg-card)] rounded-[20px] p-8 hover:card-shadow-hover transition-all duration-[var(--transition-calm)] hover:translate-y-[-2px]">
+          <time class="text-sm text-[var(--text-tertiary)] mb-2 block" datetime="2025-01-15">
+            15 January 2025
+          </time>
+          <h2 class="text-2xl font-semibold mb-3 text-[var(--text-primary)]">
+            Building systems that care
+          </h2>
+          <p class="text-[var(--text-secondary)] mb-4 leading-relaxed">
+            Coming soon...
+          </p>
+        </article>
+
+        <article class="card-shadow bg-[var(--bg-card)] rounded-[20px] p-8 hover:card-shadow-hover transition-all duration-[var(--transition-calm)] hover:translate-y-[-2px]">
+          <time class="text-sm text-[var(--text-tertiary)] mb-2 block" datetime="2025-01-08">
+            8 January 2025
+          </time>
+          <h2 class="text-2xl font-semibold mb-3 text-[var(--text-primary)]">
+            Why local-first matters
+          </h2>
+          <p class="text-[var(--text-secondary)] mb-4 leading-relaxed">
+            Coming soon...
+          </p>
+        </article>
+
+        <article class="card-shadow bg-[var(--bg-card)] rounded-[20px] p-8 hover:card-shadow-hover transition-all duration-[var(--transition-calm)] hover:translate-y-[-2px]">
+          <time class="text-sm text-[var(--text-tertiary)] mb-2 block" datetime="2024-12-20">
+            20 December 2024
+          </time>
+          <h2 class="text-2xl font-semibold mb-3 text-[var(--text-primary)]">
+            Hardware is hard, but worth it
+          </h2>
+          <p class="text-[var(--text-secondary)] mb-4 leading-relaxed">
+            Coming soon...
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,211 @@
+[
+  {
+    "slug": "ludo",
+    "title": "Ludo",
+    "status": "mature",
+    "kind": "ops",
+    "hardware": false,
+    "maturity": 5,
+    "impact": 5,
+    "effort": 4,
+    "oneLiner": "Visitor wallet and back office that has already survived real mud and real queues."
+  },
+  {
+    "slug": "orbit",
+    "title": "Orbit",
+    "status": "active",
+    "kind": "software",
+    "hardware": false,
+    "maturity": 4,
+    "impact": 4,
+    "effort": 4,
+    "oneLiner": "Relationship manager that helps you care for people without feeds or extraction."
+  },
+  {
+    "slug": "senco",
+    "title": "Senco",
+    "status": "active",
+    "kind": "software",
+    "hardware": false,
+    "maturity": 4,
+    "impact": 4,
+    "effort": 3,
+    "oneLiner": "Live Q&A and reflections for classes and crowds, built for calm control."
+  },
+  {
+    "slug": "stor",
+    "title": "Stor",
+    "status": "active",
+    "kind": "hardware",
+    "hardware": true,
+    "maturity": 3.5,
+    "impact": 4,
+    "effort": 4,
+    "oneLiner": "Local-first home server and AI box that keeps your life close."
+  },
+  {
+    "slug": "cue",
+    "title": "Cue",
+    "status": "incubating",
+    "kind": "ops",
+    "hardware": false,
+    "maturity": 2.5,
+    "impact": 4,
+    "effort": 4,
+    "oneLiner": "Queue-native follow-up that politely closes loops across SMS, WhatsApp, email and voice."
+  },
+  {
+    "slug": "clio",
+    "title": "Clio",
+    "status": "incubating",
+    "kind": "software",
+    "hardware": false,
+    "maturity": 3,
+    "impact": 3,
+    "effort": 3,
+    "oneLiner": "Voice and visual interface to Stor with memory you own."
+  },
+  {
+    "slug": "sol",
+    "title": "Sol",
+    "status": "incubating",
+    "kind": "hardware",
+    "hardware": true,
+    "maturity": 2.5,
+    "impact": 4,
+    "effort": 3,
+    "oneLiner": "Deployable radial solar that turns a rig into a quiet power plant."
+  },
+  {
+    "slug": "pod",
+    "title": "Pod",
+    "status": "concept",
+    "kind": "hardware",
+    "hardware": true,
+    "maturity": 2,
+    "impact": 2,
+    "effort": 3,
+    "oneLiner": "Pocketable Stor extension for capture and offsite backup."
+  },
+  {
+    "slug": "dollarydoos",
+    "title": "Dollarydoos",
+    "status": "incubating",
+    "kind": "finance",
+    "hardware": false,
+    "maturity": 2.5,
+    "impact": 4,
+    "effort": 4,
+    "oneLiner": "Social-purpose wallet with simple fees and real local impact."
+  },
+  {
+    "slug": "jupiter",
+    "title": "Jupiter",
+    "status": "concept",
+    "kind": "finance",
+    "hardware": false,
+    "maturity": 1.5,
+    "impact": 4,
+    "effort": 3,
+    "oneLiner": "EV-charging payments layer with proper pricing and ISO-15118 trajectory."
+  },
+  {
+    "slug": "adlirain",
+    "title": "Adlirain",
+    "status": "incubating",
+    "kind": "software",
+    "hardware": false,
+    "maturity": 2.5,
+    "impact": 4,
+    "effort": 3,
+    "oneLiner": "Adler-style coach that turns worry into action with weekly courage reps."
+  },
+  {
+    "slug": "theos",
+    "title": "Theo's",
+    "status": "concept",
+    "kind": "playful",
+    "hardware": false,
+    "maturity": 1.5,
+    "impact": 3,
+    "effort": 2,
+    "oneLiner": "A humorous git-style explorer of faiths and philosophies, rigorous but kind."
+  },
+  {
+    "slug": "halcyon",
+    "title": "Halcyon / Amber",
+    "status": "concept",
+    "kind": "hardware",
+    "hardware": true,
+    "maturity": 1.5,
+    "impact": 3,
+    "effort": 3,
+    "oneLiner": "Brain and eye safe education computing with gentle defaults."
+  },
+  {
+    "slug": "plexus",
+    "title": "Plexus",
+    "status": "active",
+    "kind": "hardware",
+    "hardware": true,
+    "maturity": 3,
+    "impact": 3,
+    "effort": 3,
+    "oneLiner": "Pop-up network kit with routers, APs, and kiosks for events."
+  },
+  {
+    "slug": "early-bird",
+    "title": "Early Bird",
+    "status": "concept",
+    "kind": "ops",
+    "hardware": false,
+    "maturity": 2,
+    "impact": 3,
+    "effort": 3,
+    "oneLiner": "Early-access ticketing and benefits layer for committed visitors."
+  },
+  {
+    "slug": "spatial-camera",
+    "title": "Spatial Camera",
+    "status": "incubating",
+    "kind": "hardware",
+    "hardware": true,
+    "maturity": 2.5,
+    "impact": 3,
+    "effort": 3,
+    "oneLiner": "Binocular capture for vivid, steady first-person stories."
+  },
+  {
+    "slug": "canned-laughter",
+    "title": "Canned Laughter",
+    "status": "concept",
+    "kind": "hardware",
+    "hardware": true,
+    "maturity": 1.5,
+    "impact": 2,
+    "effort": 2,
+    "oneLiner": "USB-C gag that delivers the right laugh at the right time."
+  },
+  {
+    "slug": "afugr",
+    "title": "AFUGR",
+    "status": "active",
+    "kind": "backbone",
+    "hardware": false,
+    "maturity": 3,
+    "impact": 4,
+    "effort": 3,
+    "oneLiner": "Quiet registry and wiring that makes the rest interoperate."
+  },
+  {
+    "slug": "bench",
+    "title": "Bench",
+    "status": "concept",
+    "kind": "playful",
+    "hardware": true,
+    "maturity": 1.5,
+    "impact": 2,
+    "effort": 2,
+    "oneLiner": "A tactile focus desk with a calm UI."
+  }
+]

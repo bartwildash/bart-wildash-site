@@ -1,0 +1,72 @@
+---
+---
+
+<header class="frosted sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3 hover:opacity-80 transition-opacity" aria-label="Bart Wildash home">
+      <img src="/logo.svg" alt="AFUGR" class="h-8 w-auto" />
+    </a>
+
+    <nav class="flex items-center gap-2" aria-label="Filter navigation">
+      <button
+        class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all"
+        data-filter="all"
+        aria-label="Show all projects"
+      >
+        All
+      </button>
+      <button
+        class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all"
+        data-filter="hardware"
+        aria-label="Show hardware projects"
+      >
+        Hardware
+      </button>
+      <a
+        href="/writing"
+        class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all"
+        aria-label="View writing"
+      >
+        Writing
+      </a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .filter-btn {
+    color: var(--text-secondary);
+  }
+
+  .filter-btn:hover {
+    color: var(--text-primary);
+    background: color-mix(in srgb, var(--ink) 5%, transparent);
+  }
+
+  .filter-btn.active {
+    color: var(--text-primary);
+    background: color-mix(in srgb, var(--ink) 10%, transparent);
+    font-weight: 600;
+  }
+</style>
+
+<script>
+  // Simple filter logic
+  const filterButtons = document.querySelectorAll('[data-filter]');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filter = button.getAttribute('data-filter');
+
+      // Update active state
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      // Dispatch custom event for BentoGrid to listen
+      window.dispatchEvent(new CustomEvent('filter-change', { detail: { filter } }));
+    });
+  });
+
+  // Set initial active state
+  document.querySelector('[data-filter="all"]')?.classList.add('active');
+</script>
