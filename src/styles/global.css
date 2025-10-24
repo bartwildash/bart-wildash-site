@@ -2,24 +2,24 @@
 
 @layer theme {
   :root {
-    /* Core tokens */
-    --ink: #0B0B0F;
-    --pewter: #F2F4F7;
-    --card: #FFFFFF;
-    --sand: #DCD5C7;
+    /* Flexoki Light - Paper */
+    --ink: #100F0F;
+    --pewter: #F2F0E5;
+    --card: #FFFCF0;
+    --sand: #CECDC3;
 
-    /* Flexoki accents - very low saturation */
-    --flexoki-blue: #4D7CFF;
-    --flexoki-purple: #E16EFF;
-    --flexoki-cyan: #5CD4E5;
-    --flexoki-green: #5ED68A;
-    --flexoki-yellow: #F7D75C;
-    --flexoki-red: #F87272;
-    --flexoki-orange: #FFA057;
+    /* Flexoki accents */
+    --flexoki-blue: #4385BE;
+    --flexoki-purple: #8B7EC8;
+    --flexoki-cyan: #3AA99F;
+    --flexoki-green: #4C9A91;
+    --flexoki-yellow: #AD8301;
+    --flexoki-red: #AF3029;
+    --flexoki-orange: #BC5215;
 
     /* Semantic tokens */
     --text-primary: var(--ink);
-    --text-secondary: #575653;
+    --text-secondary: #6F6E69;
     --text-tertiary: #878580;
     --bg: #FFFCF0;
     --bg-card: var(--card);
@@ -30,17 +30,30 @@
     --transition-calm: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --pewter: #111216;
-      --card: #15171C;
-      --text-primary: #F2F4F7;
-      --text-secondary: #C8C6C3;
-      --text-tertiary: #878580;
-      --bg: #0B0B0F;
-      --bg-card: var(--card);
-      --bg-pewter: var(--pewter);
-    }
+  /* Dark mode via .dark class */
+  html.dark {
+    /* Flexoki Dark */
+    --ink: #CECDC3;
+    --pewter: #282726;
+    --card: #1C1B1A;
+    --sand: #343331;
+
+    /* Flexoki accents for dark */
+    --flexoki-blue: #4385BE;
+    --flexoki-purple: #8B7EC8;
+    --flexoki-cyan: #3AA99F;
+    --flexoki-green: #4C9A91;
+    --flexoki-yellow: #D0A215;
+    --flexoki-red: #D14D41;
+    --flexoki-orange: #DA702C;
+
+    /* Semantic tokens */
+    --text-primary: #CECDC3;
+    --text-secondary: #B7B5AC;
+    --text-tertiary: #878580;
+    --bg: #100F0F;
+    --bg-card: var(--card);
+    --bg-pewter: var(--pewter);
   }
 }
 

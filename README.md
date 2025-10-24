@@ -4,7 +4,8 @@ A fast, minimal personal website built with Astro, featuring a bento grid layout
 
 ## Features
 
-- **Bento Grid Layout**: Projects dynamically sized based on maturity, impact, and effort scores
+- **Project List Layout**: Clean, retro-style list with inline badges
+- **Dark Mode**: Toggle between Flexoki light and dark themes
 - **iOS-like Design**: Frosted glass header, soft shadows, large titles, 20px rounded corners
 - **Flexoki Palette**: Thin, pale, breathable colours with plenty of white space
 - **Performance**: Under 200 KB JS on first load, optimized for speed
@@ -66,13 +67,19 @@ npm run build
 npm run preview
 ```
 
-## Deployment on Vercel
+## Deployment on Cloudflare Pages
 
 1. Push this repository to GitHub
-2. Import the project in Vercel
-3. Vercel will auto-detect Astro and configure build settings
-4. Set custom domain: `bart.wildash.com`
-5. Deploy
+2. Connect to Cloudflare Pages (or use Wrangler CLI)
+3. Build command: `npm run build`
+4. Build output directory: `dist`
+5. Set custom domain: `bart.wildash.com`
+
+### Using Wrangler CLI
+
+```bash
+npx wrangler pages deploy dist --project-name=bart-wildash-site
+```
 
 ### Environment Variables
 
