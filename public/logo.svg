@@ -5,14 +5,14 @@
   </style>
 
   <g transform="translate(100,780)">
-    <!-- A (bottom layer) -->
-    <text class="face" x="0"    y="0" font-size="760" fill="#4D7CFF" letter-spacing="-30">A</text>
+    <!-- A (bottom layer, shifted left) -->
+    <text class="face" x="-20"  y="0" font-size="760" fill="#4D7CFF" letter-spacing="-30">A</text>
     <!-- U (behind F) -->
     <text class="face" x="646"  y="0" font-size="760" fill="#5CD4E5" letter-spacing="-30" opacity="0.95">U</text>
     <!-- R (behind G) -->
     <text class="face" x="1366" y="0" font-size="760" fill="#5ED68A" letter-spacing="-30" opacity="0.95">R</text>
-    <!-- F (above U - drawn later so appears on top) -->
-    <text class="face" x="420"  y="0" font-size="760" fill="#E16EFF" letter-spacing="-30">F</text>
+    <!-- F (above U, shifted left) -->
+    <text class="face" x="390"  y="0" font-size="760" fill="#E16EFF" letter-spacing="-30">F</text>
     <!-- G (above R - topmost, drawn last) -->
     <text class="face" x="1006" y="0" font-size="760" fill="#F7D75C" letter-spacing="-30">G</text>
   </g>
