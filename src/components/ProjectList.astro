@@ -20,6 +20,13 @@ import projects from '../data/projects.json';
     >
       Hardware
     </button>
+    <button
+      class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all"
+      data-filter="experiments"
+      aria-label="Show experimental projects"
+    >
+      Experiments
+    </button>
   </div>
 
   <!-- Project List -->
@@ -73,11 +80,14 @@ import projects from '../data/projects.json';
       const projects = document.querySelectorAll('.project-list-item');
       projects.forEach((project) => {
         const isHardware = project.getAttribute('data-hardware') === 'true';
+        const kind = project.getAttribute('data-kind');
 
         if (filter === 'all') {
           project.style.display = '';
         } else if (filter === 'hardware') {
           project.style.display = isHardware ? '' : 'none';
+        } else if (filter === 'experiments') {
+          project.style.display = kind === 'playful' ? '' : 'none';
         }
       });
     });
